@@ -1,5 +1,7 @@
 # thorlabs-motorized-stage-control
-Control of motor for Thorlabs motorized stages, LNR502E with optical encoder using BSC201 controller.
+Control of motor for Thorlabs motorized stages, LNR502E with optical encoder using BSC201 controller. 
+
+You need to have installed Thorlabs Kinesis library and use its .net DLLs.
 
 ![ETN053047-lrg](https://github.com/pao3007/thorlabs-motorized-stage-control/assets/35431691/6f3c447a-a1eb-46bf-b297-05aa61200c16)
 
