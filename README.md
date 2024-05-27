@@ -5,15 +5,20 @@ Control of motor for Thorlabs motorized stages, LNR502E with optical encoder usi
 
 Initialize class, we need to know serial number of controller and name of stage.
 ```python
-tbc = ThorlabsStageControl(serial_number, stage_name)
+tbc = ThorlabsStageControl(serial_number='123456', stage_name='LNR502E', polling_rate=100, max_acc=5.0, max_vel=20.0)
 ```
-To move by some distance we use:
+Controller does not remember its position after turning off, so we need to home it to zero.
 ```python
-tbc.move_relative(-25.0)
+tbc.home_motor()
 ```
+To move by some distance we use, change timeout based on max acceleration and velocity:
+```python
+tbc.move_relative(distance=-25.0, timeout=5000)
+```
+DotNet function will wait till move finishes, if it does not finish in time it will raise exception.
 To move at some position we use 
 ```python
-tbc.move_absolute(25.0)
+tbc.move_absolute(position=25.0, timeout=5000)
 ```
 To read position of optical encoder, you need to know max value of encoder to calculate distance:
 ```python
