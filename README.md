@@ -11,7 +11,7 @@ Controller does not remember its position after turning off, so we need to home 
 ```python
 tbc.home_motor()
 ```
-To move by some distance we use, change timeout based on max acceleration and velocity:
+To move by some distance we use, (change timeout based on max acceleration and velocity):
 ```python
 tbc.move_relative(distance=-25.0, timeout=5000)
 ```
