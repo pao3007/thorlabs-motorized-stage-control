@@ -5,7 +5,7 @@ Control of motor for Thorlabs motorized stages, LNR502E with optical encoder usi
 
 Initialize class, we need to know serial number of controller and name of stage.
 ```python
-tbc = ThorlabsBenchtopControl(serial_number, stage_name)
+tbc = ThorlabsStageControl(serial_number, stage_name)
 ```
 To move by some distance we use:
 ```python
