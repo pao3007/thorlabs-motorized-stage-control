@@ -11,12 +11,13 @@ Controller does not remember its position after turning off, so we need to home 
 ```python
 tbc.home_motor()
 ```
-To move by some distance we use, (change timeout based on max acceleration and velocity):
+To move by some distance we use [mm], (change timeout based on max acceleration and velocity):
 ```python
 tbc.move_relative(distance=-25.0, timeout=5000)
 ```
 DotNet function will wait till move finishes, if it does not finish in time it will raise exception.
-To move at some position we use 
+
+To move at some position we use [mm]:
 ```python
 tbc.move_absolute(position=25.0, timeout=5000)
 ```
